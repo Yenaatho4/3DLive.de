@@ -3,64 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3Dlive</title>
+  <title>3Dlive | Print Solutions</title>
   <style>
-    body {
+    /* Allgemein */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #1f2937 60%, #60a5fa 100%);
-      height: 100vh;
-      color: #fff;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #0f172a);
+      background-attachment: fixed;
+      background-size: 300% 300%;
+      color: #f9fafb;
+      line-height: 1.6;
     }
-    .overlay {
-      background: rgba(30,41,59,0.92);
-      border-radius: 20px;
-      box-shadow: 0 8px 32px 0 rgba(31,41,55,0.25);
-      max-width: 500px;
-      margin: 80px auto;
-      padding: 40px 32px;
+
+    /* Header */
+    header {
       text-align: center;
+      padding: 80px 20px 60px;
+      background: linear-gradient(160deg, #1e293b, #3b82f6);
+      border-bottom: 4px solid #3b82f6;
     }
-    h1 {
-      font-size: 2.4em;
-      margin-bottom: 16px;
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 12px;
       color: #60a5fa;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
     }
-    p {
+    header p {
       font-size: 1.2em;
-      margin-bottom: 16px;
-    }
-    .tip-box {
-      background: rgba(96,165,250,0.18);
-      border-left: 4px solid #60a5fa;
-      margin-top: 22px;
-      padding: 18px 12px;
-      border-radius: 12px;
       color: #e5e7eb;
-      font-size: 1em;
-      text-align: left;
     }
+
+    /* Hauptinhalt */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Print Solutions Section */
+    .solutions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .card {
+      background: linear-gradient(145deg, rgba(30,41,59,0.95), rgba(55,65,81,0.9));
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      border: 1px solid rgba(96,165,250,0.25); /* dezenter Rahmen */
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.4);
+      border-color: rgba(96,165,250,0.6); /* Rahmen hebt sich beim Hover stärker ab */
+    }
+    .card h3 {
+      color: #60a5fa;
+      margin-bottom: 12px;
+      font-size: 1.4em;
+    }
+    .card p {
+      font-size: 1em;
+      color: #d1d5db;
+    }
+
+    /* Tipps */
+    .tips {
+      margin-top: 60px;
+      background: linear-gradient(135deg, rgba(96,165,250,0.18), rgba(96,165,250,0.05));
+      border-left: 5px solid #60a5fa;
+      border: 1px solid rgba(96,165,250,0.25); /* neuer Rahmen */
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 1.05em;
+      color: #f3f4f6;
+      transition: border-color 0.25s ease;
+    }
+    .tips:hover {
+      border-color: rgba(96,165,250,0.6); /* beim Hover etwas betonter */
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(160deg, #1e293b, #111827);
+      font-size: 0.9em;
+      color: #9ca3af;
+    }
+
+    /* Responsive */
     @media (max-width: 600px) {
-      .overlay {
-        max-width: 95vw;
-        padding: 24px 8px;
+      header h1 {
+        font-size: 2.2em;
       }
-      h1 {
-        font-size: 2em;
+      .card h3 {
+        font-size: 1.2em;
       }
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
+  <!-- Header -->
+  <header>
     <h1>3Dlive</h1>
-    <p>Willkommen auf deiner 3D-Druck-Webseite!<br>
-      Hier findest du Tipps und Inspiration, um deine Prints zu verbessern.</p>
-    <div class="tip-box">
-      <strong>Tipp:</strong> Für bessere Druckqualität sorge für ein sauberes Druckbett und die richtige Temperatur!
+    <p>Deine Plattform für 3D-Druck Tipps, Ideen & Print Solutions</p>
+  </header>
+
+  <!-- Hauptbereich -->
+  <div class="container">
+    <h2 style="color:#f9fafb; margin-bottom: 16px;">Print Solutions</h2>
+    <p>Hier findest du praktische Lösungen, mit denen du deine 3D-Drucke verbessern und effizienter gestalten kannst:</p>
+
+    <div class="solutions">
+      <div class="card">
+        <h3>✔ Druckbett-Haftung</h3>
+        <p>Erreiche perfekte erste Schichten durch korrekt eingestellte Temperaturen, Klebefolien oder spezielle Druckbett-Beschichtungen.</p>
+      </div>
+      <div class="card">
+        <h3>✔ Filament-Optimierung</h3>
+        <p>Die richtige Wahl von PLA, PETG oder ABS für deine Projekte – inklusive Tipps zur Lagerung und Trocknung.</p>
+      </div>
+      <div class="card">
+        <h3>✔ Nachbearbeitung</h3>
+        <p>Glätten, Schleifen und Lackieren: So gibst du deinen Prints ein professionelles Finish.</p>
+      </div>
+      <div class="card">
+        <h3>✔ Fehlerbehebung</h3>
+        <p>Von Warping bis Stringing – erkenne typische Druckprobleme und löse sie effizient.</p>
+      </div>
+    </div>
+
+    <!-- Tipps -->
+    <div class="tips">
+      <strong>Tipp:</strong> Stelle sicher, dass dein Druckbett sauber und plan ist. Kleine Kalibrierungen machen oft den größten Unterschied in der Druckqualität!
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 3Dlive | Dein Guide für bessere 3D-Drucke
+  </footer>
 </body>
 </html>

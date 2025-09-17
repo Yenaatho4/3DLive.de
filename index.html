@@ -3,155 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3Dlive | Print Solutions</title>
+  <title>Minimalistische Seite</title>
   <style>
-    /* Allgemein */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e3a8a, #0f172a);
-      background-attachment: fixed;
-      background-size: 300% 300%;
-      color: #f9fafb;
-      line-height: 1.6;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      color: #f1f5f9;
     }
 
-    /* Header */
-    header {
-      text-align: center;
-      padding: 80px 20px 60px;
-      background: linear-gradient(160deg, #1e293b, #3b82f6);
-      border-bottom: 4px solid #3b82f6;
-    }
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 12px;
-      color: #60a5fa;
-      letter-spacing: 2px;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #e5e7eb;
-    }
-
-    /* Hauptinhalt */
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 40px 20px;
     }
 
-    /* Print Solutions Section */
-    .solutions {
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5em;
+      color: #f8fafc;
+    }
+
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
-      margin-top: 40px;
     }
+
+    /* Karten überarbeitet */
     .card {
-      background: linear-gradient(145deg, rgba(30,41,59,0.95), rgba(55,65,81,0.9));
+      background: linear-gradient(145deg, rgba(37, 47, 69, 0.98), rgba(59, 72, 99, 0.95));
       border-radius: 16px;
       padding: 24px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-      border: 1px solid rgba(96,165,250,0.25); /* dezenter Rahmen */
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      border: 1px solid rgba(96,165,250,0.35);
       transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 28px rgba(0,0,0,0.4);
-      border-color: rgba(96,165,250,0.6); /* Rahmen hebt sich beim Hover stärker ab */
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 32px rgba(96,165,250,0.45);
+      border-color: rgba(96,165,250,0.8);
     }
     .card h3 {
-      color: #60a5fa;
+      color: #3b82f6;
       margin-bottom: 12px;
       font-size: 1.4em;
     }
     .card p {
       font-size: 1em;
-      color: #d1d5db;
+      color: #e5e7eb;
     }
 
-    /* Tipps */
-    .tips {
-      margin-top: 60px;
-      background: linear-gradient(135deg, rgba(96,165,250,0.18), rgba(96,165,250,0.05));
-      border-left: 5px solid #60a5fa;
-      border: 1px solid rgba(96,165,250,0.25); /* neuer Rahmen */
-      padding: 20px;
-      border-radius: 12px;
-      font-size: 1.05em;
-      color: #f3f4f6;
-      transition: border-color 0.25s ease;
+    /* Tipps-Box */
+    .tip-box {
+      margin-top: 50px;
+      padding: 24px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(96,165,250,0.3);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
     }
-    .tips:hover {
-      border-color: rgba(96,165,250,0.6); /* beim Hover etwas betonter */
+    .tip-box:hover {
+      border-color: rgba(96,165,250,0.8);
+      box-shadow: 0 8px 28px rgba(96,165,250,0.35);
     }
-
-    /* Footer */
-    footer {
-      margin-top: 60px;
-      text-align: center;
-      padding: 20px;
-      background: linear-gradient(160deg, #1e293b, #111827);
-      font-size: 0.9em;
-      color: #9ca3af;
+    .tip-box h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.6em;
+      color: #60a5fa;
     }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2em;
-      }
-      .card h3 {
-        font-size: 1.2em;
-      }
+    .tip-box p {
+      margin: 0;
+      color: #e2e8f0;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>3Dlive</h1>
-    <p>Deine Plattform für 3D-Druck Tipps, Ideen & Print Solutions</p>
-  </header>
-
-  <!-- Hauptbereich -->
   <div class="container">
-    <h2 style="color:#f9fafb; margin-bottom: 16px;">Print Solutions</h2>
-    <p>Hier findest du praktische Lösungen, mit denen du deine 3D-Drucke verbessern und effizienter gestalten kannst:</p>
+    <h1>Willkommen auf meiner Seite</h1>
 
-    <div class="solutions">
+    <div class="grid">
       <div class="card">
-        <h3>✔ Druckbett-Haftung</h3>
-        <p>Erreiche perfekte erste Schichten durch korrekt eingestellte Temperaturen, Klebefolien oder spezielle Druckbett-Beschichtungen.</p>
+        <h3>Karte 1</h3>
+        <p>Dies ist eine Beispielkarte mit Textinhalt.</p>
       </div>
       <div class="card">
-        <h3>✔ Filament-Optimierung</h3>
-        <p>Die richtige Wahl von PLA, PETG oder ABS für deine Projekte – inklusive Tipps zur Lagerung und Trocknung.</p>
+        <h3>Karte 2</h3>
+        <p>Eine weitere Karte für Inhalte oder Informationen.</p>
       </div>
       <div class="card">
-        <h3>✔ Nachbearbeitung</h3>
-        <p>Glätten, Schleifen und Lackieren: So gibst du deinen Prints ein professionelles Finish.</p>
-      </div>
-      <div class="card">
-        <h3>✔ Fehlerbehebung</h3>
-        <p>Von Warping bis Stringing – erkenne typische Druckprobleme und löse sie effizient.</p>
+        <h3>Karte 3</h3>
+        <p>Auch hier kannst du beliebigen Text oder Elemente einsetzen.</p>
       </div>
     </div>
 
-    <!-- Tipps -->
-    <div class="tips">
-      <strong>Tipp:</strong> Stelle sicher, dass dein Druckbett sauber und plan ist. Kleine Kalibrierungen machen oft den größten Unterschied in der Druckqualität!
+    <div class="tip-box">
+      <h2>💡 Tipp</h2>
+      <p>Hier kannst du nützliche Tipps oder Hinweise einfügen.</p>
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer>
-    © 2025 3Dlive | Dein Guide für bessere 3D-Drucke
-  </footer>
 </body>
 </html>
